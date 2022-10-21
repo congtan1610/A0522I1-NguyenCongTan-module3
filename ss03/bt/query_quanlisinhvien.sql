@@ -25,4 +25,10 @@ where StudentName = 'Hung';
 
 select s.StudentName, su.SubName, m.Mark
 from mark as m join student as s on m.StudentId=s.StudentId join `subject` as su on su.SubID=m.SubID 
-order by Mark desc;
+order by  Mark desc,StudentName asc;
+
+update mark
+set mark=12
+where StudentId=2;
+
+select * from mark;
