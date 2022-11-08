@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>layout với RWD</title>
+    <style>
+        * {
+            margin: 0px;
+        }
+
+        .header {
+            background-color: gray;
+            position: fixed;
+            height: 50px;
+            width: 100%;
+            top:0px;
+        }
+
+        .header > .div_menu {
+            float: left;
+            height: 60%;
+            width: 50px;
+            padding: 10px;
+            color: white;
+        }
+
+        .header > .div_menu:hover {
+            background-color: black;
+        }
+
+        .header > .div_login {
+            float: right;
+            height: 60%;
+            width: 50px;
+            padding: 10px;
+            color: white;
+        }
+
+        .header > .div_login:hover {
+            background-color: black;
+        }
+        .div_content{
+            height: 550px;
+            margin-top: 50px;
+        }
+        .nav {
+            float: left;
+            width: 23%;
+            height: 100%;
+            background-color: #CDCDCD;
+            margin-right: 2%;
+        }
+        .nav>div{
+            margin-top: 20px;
+            margin-left: 40%;
+        }
+        .nav>div>a{
+            text-decoration: none;
+            color: blue;
+        }
+        .nav>div>a:hover{
+            color: red;
+        }
+        .section {
+            float: left;
+            width: 50%;
+            text-align: justify;
+        }
+        .section>h1 p{
+            margin-right: 10px;
+        }
+        .sidebar {
+            float: left;
+            width: 23%;
+            height: 100%;
+            background-color: #CDCDCD;
+            margin-left: 2%;
+        }
+        .sidebar>div{
+            border: solid 1px gray;
+            width: 60%;
+            height: 15%;
+            text-align: center;
+            margin:20px 0px 0px 55px;
+        }
+        .sidebar>div>p{
+            margin-top: 30px;
+        }
+        .sidebar>div:hover{
+            background-color: gray;
+        }
+        .footer {
+            clear: both;
+            height: 50px;
+            background-color: gray;
+        }
+        @media screen and (max-width: 1000px){
+            .section{
+                font-size: 150%;
+                width: 100%;
+                height: 100%;
+            }
+            .nav{
+                display: none;
+            }
+            .sidebar{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="div_menu">Logo</div>
+    <div class="div_menu">Home</div>
+    <div class="div_menu">About</div>
+    <div class="div_menu">Projects</div>
+    <div class="div_menu">Contact</div>
+    <div class="div_login">Login</div>
+</header>
+<div class="div_content">
+    <nav class="nav">
+        <div><a href="#">Link</a> </div>
+        <div><a href="#">Link</a> </div>
+        <div><a href="#">Link</a> </div>
+    </nav>
+    <section class="section">
+        <h1 style="padding-bottom: 10px;">Welcome</h1>
+        <p style="border-bottom: solid 1px black;padding-bottom: 10px;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+            laborum.</p>
+        <h1 style="padding-bottom: 10px;padding-top:20px; ">Test</h1>
+        <p>Lorem ipsum...</p>
+    </section>
+    <aside class="sidebar">
+        <div><p>ADS</p></div>
+        <div><p>ADS</p></div>
+    </aside>
+</div>
+<footer class="footer">
+    <center style="padding-top: 10px">Footer text</center>
+</footer>
+</body>
+</html>

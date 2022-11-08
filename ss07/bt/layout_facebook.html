@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>layout_facebook</title>
+    <style>
+        * {
+            margin: 0px;
+        }
+
+        .header {
+            height: 56px;
+            width: 100%;
+            position: fixed;
+            background-color: gray;
+        }
+
+        .nav {
+            height: 1000px;
+            width: 25%;
+            float: left;
+            background-color: aqua;
+            margin-top: 56px;
+        }
+
+        .section {
+            height: 1000px;
+            width: 50%;
+            float: left;
+            background-color: darkkhaki;
+            margin-top: 56px;
+        }
+
+        .aside {
+            height: 1000px;
+            width: 25%;
+            float: left;
+            background-color: orange;
+            margin-top: 56px;
+        }
+
+        .footer {
+            clear: both;
+            height: 100px;
+            background-color: green;
+        }
+        @media screen and (max-width: 1000px){
+            body{
+                font-size: 300%;
+            }
+            .header{
+                height: 100px;
+                position: fixed;
+            }
+            .section{
+                width: 100%;
+                height: 2000px;
+                margin-top: 100px;
+            }
+            .nav{
+                display: none;
+            }
+            .aside{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <center>header</center>
+</header>
+<nav class="nav">
+    <center>nav</center>
+</nav>
+<section class="section">
+    <center>section</center>
+</section>
+<aside class="aside">
+    <center>side bar</center>
+</aside>
+<footer class="footer">
+    <center>footer</center>
+</footer>
+</body>
+</html>
