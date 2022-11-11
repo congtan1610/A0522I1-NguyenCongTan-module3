@@ -1,49 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../file_bootstrap5/bootstrap.min.css" >
-    <script src="../../file_bootstrap5/bootstrap.bundle.min.js"></script>
-    <title>Langding Page demo</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../file_bootstrap5/bootstrap.min.css">
+  <script src="../../file_bootstrap5/bootstrap.bundle.min.js"></script>
+  <style>
+    .logo {
+      height: 50px;
+      width: 120px;
+
+    }
+
+    .none {
+      border-left: solid 2px black;
+    }
+
+    .ef:hover {
+      text-decoration: underline 1px black;
+    }
+
+    .ga {
+      float: left;
+    }
+
+    .vit {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .dropdown {
+      font-size: 12px;
+      padding-top: 4px;
+    }
+
+    .vc {
+      text-decoration: none;
+      color: black;
+    }
+
+    .vc:hover {
+      text-decoration: underline 1px black;
+      color: black;
+    }
+
+  </style>
+  <title>Langding Page demo</title>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container" style="background-color: white;">
+      <a class="navbar-brand" href="#">
+        <img itemprop="logo" itemscope="itemscope" class="logo" alt="Microsoft"
+          src="https://blogs.microsoft.com/wp-content/uploads/prod/2012/08/8867.Microsoft_5F00_Logo_2D00_for_2D00_screen.jpg">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active none ef" aria-current="page" href="#" style="font-weight: bold;">Surface</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle ef non " href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Computers
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: 800px;font-size:12px;">
+              <div class="ga">
+                <li><a class="dropdown-item vit">2-in-1 PCs</a></li>
+                <li><a class="dropdown-item ef" href="#">NEW Surface Pro 9</a></li>
+                <li><a class="dropdown-item ef" href="#">Surface Pro 8</a></li>
+                <li><a class="dropdown-item ef" href="#">Surface Pro 7+</a></li>
+                <li><a class="dropdown-item ef" href="#">Surface Go 3</a></li>
+                <li><a class="dropdown-item ef" href="#">Explore all 2-in-1 PCs</a></li>
+              </div>
+              <div class="ga">
+                <li><a class="dropdown-item vit">Laptop</a></li>
+                <li><a class="dropdown-item ef" href="#">NEW Surface Laptop 5</a></li>
+                <li><a class="dropdown-item ef" href="#">Surface Laptop 4</a></li>
+                <li><a class="dropdown-item ef" href="#">Surface Laptop Studio</a></li>
+                <li><a class="dropdown-item ef" href="#">Surface Laptop Go 2</a></li>
+                <li><a class="dropdown-item ef" href="#">Explore all Laptops</a></li>
+              </div>
+              <div class="ga">
+                <li><a class="dropdown-item vit">Dual Screen</a></li>
+                <li><a class="dropdown-item ef" href="#">Surface Dual 2</a></li>
+              </div>
+              <div class="ga">
+                <li><a class="dropdown-item vit">All-in-One</a></li>
+                <li><a class="dropdown-item ef" href="#">NEW Surface Studio 2+</a></li>
+              </div>
+              <div class="ga">
+                <li><a class="dropdown-item vit">Need help deciding?</a></li>
+                <li><a class="dropdown-item ef" href="#">Compare Surface devices</a></li>
+                <li><a class="dropdown-item ef" href="#">Help me choose a Surface </a></li>
+                <li><a class="dropdown-item ef" href="#">Why Surface </a></li>
+              </div>
             </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle ef" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Computers for Business
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: 1080px;font-size:12px;">
+              <div class="ga">
+                <li><a class="dropdown-item vit">2-in-1 Tablets</a></li>
+                <li><a class="dropdown-item ef" href="#">NEW Surface Pro 9 for Business</a></li>
+                <li><a class="dropdown-item ef" href="#">Surface Pro 8 for Business</a></li>
+                <li><a class="dropdown-item ef" href="#">Surface Pro 7+</a></li>
+                <li><a class="dropdown-item ef" href="#">Surface Go 3 for Business</a></li>
+                <li><a class="dropdown-item ef" href="#">Surface Pro 7+ for Business</a></li>
+              </div>
+              <div class="ga">
+                <li><a class="dropdown-item vit">Laptops</a></li>
+                <li><a class="dropdown-item ef" href="#">NEW Surface Laptop 5 for Business</a></li>
+                <li><a class="dropdown-item ef" href="#">Surface Laptop Studio for Business</a></li>
+                <li><a class="dropdown-item ef" href="#">NEW Surface Laptop Go 2 for Business</a></li>
+                <li><a class="dropdown-item ef" href="#">Surface Laptop SE for Education</a></li>
+              </div>
+              <div class="ga">
+                <li><a class="dropdown-item vit">Small and Large Screens</a></li>
+                <li><a class="dropdown-item ef" href="#">Surface Duo 2 for Business</a></li>
+                <li><a class="dropdown-item ef" href="#">NEW Surface Studio 2+ for Business</a></li>
+                <li><a class="dropdown-item ef" href="#">Surface Hub 2S</a></li>
+              </div>
+              <div class="ga">
+                <li><a class="dropdown-item vit">Accessories</a></li>
+                <li><a class="dropdown-item ef" href="#">All Accessories</a></li>
+                <li><a class="dropdown-item ef" href="#">Surface Headphones 2+</a></li>
+                <li><a class="dropdown-item ef" href="#">Teams Accessories</a></li>
+              </div>
+              <div class="ga">
+                <li><a class="dropdown-item vit">Need help deciding?</a></li>
+                <li><a class="dropdown-item ef" href="#">Compare Surface devices for Business</a></li>
+                <li><a class="dropdown-item ef " href="#">Help me choose a Surface </a></li>
+              </div>
+              <div style="clear: both;width:1078px;height:20px;background-color: rgb(207, 210, 210);padding-left: 40%;">
+                <a class="ef vc" href="#">SURFACE FOR BUSSINESS HOME</a>
+              </div>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle ef" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Accessories
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="font-size:12px;">
+              <div class="ga">
+                <li><a class="dropdown-item ef" href="#"> Surface Pro accessories</a></li>
+                <li><a class="dropdown-item ef" href="#">Surface Pro 7+ accessories</a></li>
+                <li><a class="dropdown-item ef" href="#">Surface Laptop accessories</a></li>
+                <li><a class="dropdown-item ef" href="#">Surface Go accessories</a></li>
+                <li><a class="dropdown-item ef" href="#">Surface Studio accessories</a></li>
+                <li><a class="dropdown-item ef" href="#">Surface Headphones 2</a></li>
+                <li><a class="dropdown-item ef" href="#">Surface Earbuds </a></li>
+                <li><a class="dropdown-item ef" href="#">All Surface accessories</a></li>
+              </div>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle ef" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Shop now
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="font-size:12px;">
+              <div class="ga">
+                <li><a class="dropdown-item ef" href="#"> Surface deals</a></li>
+                <li><a class="dropdown-item ef" href="#">Surface bundlea</a></li>
+                <li><a class="dropdown-item ef" href="#">All Surface divices</a></li>
+                <li><a class="dropdown-item ef" href="#">Where to buy</a></li>
+                <li><a class="dropdown-item ef" href="#">Personal shopping apointments</a></li>
+              </div>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link e ef" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Support
+            </a>
+          </li>
+
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
 </body>
+
 </html>
