@@ -76,9 +76,9 @@ public class ProductServlet extends HttpServlet {
 
     private void searchByName(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name = String.valueOf(request.getParameter("nameProduct"));
-        if(name.isEmpty()){
+        if (name.isEmpty()) {
             response.sendRedirect("/Product?action=list");
-        }else {
+        } else {
             request.setAttribute("list", productService.search(name));
             request.getRequestDispatcher("/out/list.jsp").forward(request, response);
         }

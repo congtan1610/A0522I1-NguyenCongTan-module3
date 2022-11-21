@@ -41,23 +41,22 @@
     </style>
 </head>
 <body class="container">
-<h1>
-    <center>Product List</center>
-</h1>
+<h1><center>Product List</center></h1>
 <input type="hidden" name="action">
-<form action="/Product" method="get">
-    <table>
-        <tr>
+<table>
+    <tr>
+        <form action="/Product" method="get">
             <td><input style="all:revert" type="submit" value="create" name="action"></td>
             <td><input style="all:revert" type="submit" value="All"></td>
-            <td width="750px"></td>
-            <td>
+        </form>
+        <td width="750px"></td>
+        <td>
+            <form action="/Product" method="get">
                 <input style="all:revert" type="text" name="nameProduct" placeholder="Enter product name">
-                <input style="all:revert" type="submit" value="search" name="action">
-            </td>
-        </tr>
-    </table>
-</form>
+                <input style="all:revert" type="submit" value="search" name="action"></form>
+        </td>
+    </tr>
+</table>
 <table class="table table-striped">
     <tr>
         <th>id</th>
