@@ -2,8 +2,11 @@ package dao;
 
 import model.User;
 
+import javax.jws.soap.SOAPBinding;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class UserDAO implements IUserDAO {
@@ -16,6 +19,7 @@ public class UserDAO implements IUserDAO {
 
     private static final String SELECT_USER_BY_ID = "select id,name,email,country from users where id =?";
     private static final String SELECT_ALL_USERS = "select * from users";
+    private static final String SELECT_ALL_USERS_BYCOUNTRY = "select id,name,email,country from users where country like ?";
     private static final String DELETE_USERS_SQL = "delete from users where id = ?;";
     private static final String UPDATE_USERS_SQL = "update users set name = ?,email= ?, country =? where id = ?;";
 
@@ -74,6 +78,31 @@ public class UserDAO implements IUserDAO {
             printSQLException(e);
         }
         return user;
+    }
+
+    public List<User> findByCountry(String countryFind) {
+        List<User> users = new ArrayList<>();
+        try (Connection connection = getConnection();
+
+             // Step 2:Create a statement using connection object
+             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_USERS_BYCOUNTRY);) {
+            preparedStatement.setString(1,"%"+countryFind+"%");
+            System.out.println(preparedStatement);
+            // Step 3: Execute the query or update query
+            ResultSet rs = preparedStatement.executeQuery();
+
+            // Step 4: Process the ResultSet object.
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                String email = rs.getString("email");
+                String country = rs.getString("country");
+                users.add(new User(id, name, email, country));
+            }
+        } catch (SQLException e) {
+            printSQLException(e);
+        }
+        return users;
     }
 
     public List<User> selectAllUsers() {

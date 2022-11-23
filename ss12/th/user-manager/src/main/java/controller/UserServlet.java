@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 @WebServlet(name = "UserServlet", urlPatterns = "/users")
@@ -36,6 +38,8 @@ public class UserServlet extends HttpServlet {
                 case "edit":
                     updateUser(request, response);
                     break;
+                default:listUser(request, response);
+                    break;
             }
         } catch (SQLException ex) {
             throw new ServletException(ex);
@@ -60,6 +64,9 @@ public class UserServlet extends HttpServlet {
                 case "delete":
                     deleteUser(request, response);
                     break;
+                case "search":
+                    searchByCountry(request, response);
+                    break;
                 default:
                     listUser(request, response);
                     break;
@@ -67,6 +74,16 @@ public class UserServlet extends HttpServlet {
         } catch (SQLException ex) {
             throw new ServletException(ex);
         }
+    }
+
+
+    private void searchByCountry(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String name =String.valueOf(request.getParameter("nameSearch")) ;
+        List<User> listUser = userDAO.findByCountry(name);
+        request.setAttribute("listUser", listUser);
+        request.setAttribute("nameSearch", name);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("list.jsp");
+        dispatcher.forward(request, response);
     }
 
     private void listUser(HttpServletRequest request, HttpServletResponse response)
