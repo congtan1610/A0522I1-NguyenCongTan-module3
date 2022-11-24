@@ -20,13 +20,6 @@
 </center>
 <div align="center">
     <caption><h2>List of Users</h2></caption>
-<%--    <div style="float: left">--%>
-<%--            <b>Sort by name:</b>--%>
-<%--            <select name="sort" onclick="this.choose()">--%>
-<%--                <option value="asc">A-Z</option>--%>
-<%--                <option value="desc">Z-A</option>--%>
-<%--            </select>--%>
-<%--    </div>--%>
     <div>
         <form method="get">
             <input type="text" name="nameSearch" placeholder="Enter name country" style="width: 250px">
