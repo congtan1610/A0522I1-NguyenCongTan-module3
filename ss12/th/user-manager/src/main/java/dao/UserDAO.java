@@ -5,8 +5,6 @@ import model.User;
 import javax.jws.soap.SOAPBinding;
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class UserDAO implements IUserDAO {
@@ -19,7 +17,7 @@ public class UserDAO implements IUserDAO {
 
     private static final String SELECT_USER_BY_ID = "select id,name,email,country from users where id =?";
     private static final String SELECT_ALL_USERS = "select * from users";
-    private static final String SELECT_ALL_USERS_BYCOUNTRY = "select id,name,email,country from users where country like ?";
+    private static final String SELECT_ALL_USERS_BYCOUNTRY = "select id,name,email,country from users where country like ? ";
     private static final String DELETE_USERS_SQL = "delete from users where id = ?;";
     private static final String UPDATE_USERS_SQL = "update users set name = ?,email= ?, country =? where id = ?;";
 

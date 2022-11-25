@@ -77,9 +77,16 @@ public class UserServlet extends HttpServlet {
     }
 
 
+
     private void searchByCountry(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name =String.valueOf(request.getParameter("nameSearch")) ;
         List<User> listUser = userDAO.findByCountry(name);
+        Collections.sort(listUser, new Comparator<User>() {
+            @Override
+            public int compare(User o1, User o2) {
+                return    o1.getName().compareTo(o2.getName());
+            }
+        });
         request.setAttribute("listUser", listUser);
         request.setAttribute("nameSearch", name);
         RequestDispatcher dispatcher = request.getRequestDispatcher("list.jsp");

@@ -49,5 +49,10 @@
         </c:forEach>
     </table>
 </div>
+<script>
+    function choose(){
+        window.location.href="/users?action=sort&sort=asc";
+    }
+</script>
 </body>
 </html>
