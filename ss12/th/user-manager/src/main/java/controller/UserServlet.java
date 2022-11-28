@@ -56,6 +56,10 @@ public class UserServlet extends HttpServlet {
 
         try {
             switch (action) {
+                case "test-without-tran":
+
+                    testWithoutTran(request, response);
+                    break;
 
                 case "permision":
 
@@ -81,6 +85,12 @@ public class UserServlet extends HttpServlet {
         } catch (SQLException ex) {
             throw new ServletException(ex);
         }
+    }
+
+    private void testWithoutTran(HttpServletRequest request, HttpServletResponse response) {
+
+        userDAO.insertUpdateWithoutTransaction();
+
     }
 
     private void addUserPermision(HttpServletRequest request, HttpServletResponse response) {
