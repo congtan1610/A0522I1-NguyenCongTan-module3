@@ -38,7 +38,8 @@ public class UserServlet extends HttpServlet {
                 case "edit":
                     updateUser(request, response);
                     break;
-                default:listUser(request, response);
+                default:
+                    listUser(request, response);
                     break;
             }
         } catch (SQLException ex) {
@@ -55,6 +56,12 @@ public class UserServlet extends HttpServlet {
 
         try {
             switch (action) {
+
+                case "permision":
+
+                    addUserPermision(request, response);
+
+                    break;
                 case "create":
                     showNewForm(request, response);
                     break;
@@ -76,15 +83,23 @@ public class UserServlet extends HttpServlet {
         }
     }
 
+    private void addUserPermision(HttpServletRequest request, HttpServletResponse response) {
 
+        User user = new User("quan", "quan.nguyen@codegym.vn", "vn");
+
+        int[] permision = {1, 2, 4};
+
+        userDAO.addUserTransaction(user, permision);
+
+    }
 
     private void searchByCountry(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String name =String.valueOf(request.getParameter("nameSearch")) ;
+        String name = String.valueOf(request.getParameter("nameSearch"));
         List<User> listUser = userDAO.findByCountry(name);
         Collections.sort(listUser, new Comparator<User>() {
             @Override
             public int compare(User o1, User o2) {
-                return    o1.getName().compareTo(o2.getName());
+                return o1.getName().compareTo(o2.getName());
             }
         });
         request.setAttribute("listUser", listUser);
@@ -99,7 +114,7 @@ public class UserServlet extends HttpServlet {
         Collections.sort(listUser, new Comparator<User>() {
             @Override
             public int compare(User o1, User o2) {
-             return    o1.getName().compareTo(o2.getName());
+                return o1.getName().compareTo(o2.getName());
             }
         });
         request.setAttribute("listUser", listUser);
