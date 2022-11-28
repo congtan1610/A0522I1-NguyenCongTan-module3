@@ -220,6 +220,65 @@ public class UserDAO implements IUserDAO {
     }
 
     @Override
+    public List<User> selectAllUsersStore() {
+        List<User> users = new ArrayList<>();
+        String query = "{CALL listUsers() }";
+
+        // try-with-resource statement will auto close the connection.
+
+        try (Connection connection = getConnection();
+
+             CallableStatement callableStatement = connection.prepareCall(query);) {
+
+            System.out.println(callableStatement);
+
+            ResultSet rs = callableStatement.executeQuery();
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                String email = rs.getString("email");
+                String country = rs.getString("country");
+                users.add(new User(id, name, email, country));
+            }
+
+        } catch (SQLException e) {
+
+            printSQLException(e);
+
+        }
+        return users;
+    }
+
+    @Override
+    public boolean deleteUserStore(int id) throws SQLException {
+        boolean rowDeleted;
+        String query = "{CALL deleteUsers(?) }";
+        try (Connection connection = getConnection();
+
+             CallableStatement callableStatement = connection.prepareCall(query);) {
+            callableStatement.setInt(1, id);
+            rowDeleted = callableStatement.executeUpdate() > 0;
+        }
+        return rowDeleted;
+    }
+
+    @Override
+    public boolean updateUserStore(User user) throws SQLException {
+        boolean rowUpdated;
+        String query = "{CALL updateUsers(?,?,?,?) }";
+        try (Connection connection = getConnection();
+
+             CallableStatement callableStatement = connection.prepareCall(query);) {
+            callableStatement.setInt(1, user.getId());
+            callableStatement.setString(2, user.getName());
+            callableStatement.setString(3, user.getEmail());
+            callableStatement.setString(4, user.getCountry());
+            rowUpdated = callableStatement.executeUpdate() > 0;
+        }
+        return rowUpdated;
+    }
+
+    @Override
     public void insertUserStore(User user) throws SQLException {
         String query = "{CALL insert_user(?,?,?)}";
 
