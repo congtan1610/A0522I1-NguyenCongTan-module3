@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="DongGoiPTBac2:jar">
+    <output-path>$PROJECT_DIR$</output-path>
+    <root id="archive" name="DongGoiPTBac2.jar">
+      <element id="module-output" name="DongGoiPTBac2" />
+    </root>
+  </artifact>
+</component>
