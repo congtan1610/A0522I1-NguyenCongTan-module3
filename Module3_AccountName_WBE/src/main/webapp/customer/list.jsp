@@ -20,6 +20,7 @@
     </style>
 </head>
 <body class="container-fluid" style="padding-left: 0;padding-right: 0;">
+<a href="/cus?action=add" style="text-decoration: none">Add new</a>
 <table class="table table-striped">
     <tr>
         <th>id</th>
@@ -36,21 +37,23 @@
     <c:forEach items="${list}" var="customer">
         <tr>
             <td>${customer.id}</td>
-            <td>${customer.type_id}</td>
+            <td>
+                <c:forEach items="${typeCus}" var="type">
+                    <c:if test="${type.type_id==customer.type_id}">${type.name}</c:if>
+                </c:forEach></td>
             <td>${customer.name}</td>
             <td>${customer.dateOfBirth}</td>
             <td>
-            <c:choose>
-                <c:when test="${customer.gender==0}">Nữ</c:when>
-                <c:otherwise>Nam</c:otherwise>
-            </c:choose>
+                <c:choose>
+                    <c:when test="${customer.gender==0}">Nữ</c:when>
+                    <c:otherwise>Nam</c:otherwise>
+                </c:choose>
             </td>
             <td>${customer.cmnd}</td>
             <td>${customer.sdt}</td>
             <td>${customer.email}</td>
             <td>${customer.address}</td>
             <td>
-                <button><a href="/cus?action=detail&id=${customer.id}">Detail</a></button>
                 <button><a href="/cus?action=update&id=${customer.id}">Update</a></button>
                 <button><a href="/cus?action=delete&id=${customer.id}">Delete</a></button>
             </td>

@@ -35,11 +35,11 @@
         </tr>
         <tr>
             <th>date of birth</th>
-            <td><input type="text" name="dateOfBirth"></td>
+            <td><input type="text" name="dateOfBirth" placeholder="yyyy-mm-dd"></td>
         </tr>
         <tr>
             <th>gender</th>
-            <td><input type="text" name="gender"></td>
+            <td><input type="text" name="gender" placeholder="nam hoặc nữ"></td>
         </tr>
         <tr>
             <th>id card</th>

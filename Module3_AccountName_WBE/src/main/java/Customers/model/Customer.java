@@ -5,7 +5,7 @@ public class Customer {
     private int type_id;
     private String name;
     private String dateOfBirth;
-    private String gender;
+    private int gender;
     private String cmnd;
     private  String sdt;
     private String email;
@@ -13,8 +13,10 @@ public class Customer {
 
     public Customer() {
     }
-
-    public Customer(int id, int type_id, String name, String dateOfBirth, String gender, String cmnd, String sdt, String email, String address) {
+    public Customer(int id) {
+        this.id = id;
+    }
+    public Customer(int id, int type_id, String name, String dateOfBirth, int gender, String cmnd, String sdt, String email, String address) {
         this.id = id;
         this.type_id = type_id;
         this.name = name;
@@ -58,11 +60,11 @@ public class Customer {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public String getGender() {
+    public int getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender(int gender) {
         this.gender = gender;
     }
 
@@ -96,5 +98,18 @@ public class Customer {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Customer)) return false;
+        Customer customer = (Customer) o;
+        return getId() == customer.getId();
+    }
+
+    @Override
+    public int hashCode() {
+        return 0;
     }
 }

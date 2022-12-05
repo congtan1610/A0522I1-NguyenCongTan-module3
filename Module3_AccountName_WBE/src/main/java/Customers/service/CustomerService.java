@@ -18,6 +18,21 @@ private CustomerRepo customerRepo=new CustomerRepo()    ;
         return customerRepo.findAll();
     }
 
+    @Override
+    public void delete(int id) {
+        customerRepo.delete(id);
+    }
+
+    @Override
+    public void update(Customer customer) {
+        customerRepo.update(customer);
+    }
+
+    @Override
+    public Customer findOne(int id) {
+        return customerRepo.findOne(id);
+    }
+
     public List<TypeCus> getType(){
         return customerRepo.getType();
     }

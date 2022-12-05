@@ -119,7 +119,7 @@
 <div class="link">
     <div class="item" style="margin-left: 300px;"><a href="#">Home</a></div>
     <div class="item"><a href="#">Employee</a></div>
-    <div class="item"><a href="#">Customer</a></div>
+    <div class="item"><a href="/cus?action=list">Customer</a></div>
     <div class="item"><a href="#">Service</a></div>
     <div class="item"><a href="#">Contract</a></div>
     <div class="item"><input type="text" placeholder="search"></div>
