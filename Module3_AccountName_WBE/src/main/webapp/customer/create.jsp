@@ -17,7 +17,7 @@
     <table border="solid 1px">
         <tr>
             <th>id</th>
-            <td><input type="text" name="id"></td>
+            <td><input type="text" name="id" value="${id}"></td>
         </tr>
         <tr>
             <th>customer type</th>
@@ -31,31 +31,54 @@
         </tr>
         <tr>
             <th>name</th>
-            <td><input type="text" name="name"></td>
+            <td><input type="text" name="name" value="${name}"></td>
         </tr>
         <tr>
             <th>date of birth</th>
-            <td><input type="text" name="dateOfBirth" placeholder="yyyy-mm-dd"></td>
+            <td>
+                <c:choose>
+                    <c:when test="${d==false}"> <input type="text" name="dateOfBirth" placeholder="yyyy-mm-dd"
+                                                       value="${dateOfBirth}" style="color: red"> </c:when>
+                    <c:otherwise><input type="text" name="dateOfBirth" placeholder="yyyy-mm-dd"
+                                        value="${dateOfBirth}"></c:otherwise>
+                </c:choose>
+            </td>
         </tr>
         <tr>
             <th>gender</th>
-            <td><input type="text" name="gender" placeholder="nam hoặc nữ"></td>
+            <td><input type="text" name="gender" placeholder="nam hoặc nữ" value="${gender}"></td>
         </tr>
         <tr>
             <th>id card</th>
-            <td><input type="text" name="cmnd"></td>
+            <td>
+                <c:choose>
+                    <c:when test="${c==false}"> <input type="text" name="cmnd" value="${cmnd}"
+                                                       style="color:red"></c:when>
+                    <c:otherwise><input type="text" name="cmnd" value="${cmnd}"></c:otherwise>
+                </c:choose></td>
         </tr>
         <tr>
             <th>number phone</th>
-            <td><input type="text" name="sdt"></td>
+            <td>
+                <c:choose>
+                    <c:when test="${s==false}"> <input type="text" name="sdt" value="${sdt}" style="color:red"></c:when>
+                    <c:otherwise><input type="text" name="sdt" value="${sdt}"></c:otherwise>
+                </c:choose></td>
+            </td>
         </tr>
         <tr>
             <th>email</th>
-            <td><input type="text" name="email"></td>
+            <td>
+                <c:choose>
+                    <c:when test="${e==false}"> <input type="text" name="email" value="${email}"
+                                                       style="color:red"></c:when>
+                    <c:otherwise><input type="text" name="email" value="${email}"></c:otherwise>
+                </c:choose>
+            </td>
         </tr>
         <tr>
             <th>address</th>
-            <td><input type="text" name="address"></td>
+            <td><input type="text" name="address" value="${address}"></td>
         </tr>
         <tr>
             <th><input type="submit" value="add" name="action"></th>

@@ -4,38 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92b1ca2f-b9af-45ab-b164-3e2822c6b525" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="92b1ca2f-b9af-45ab-b164-3e2822c6b525" name="Changes" comment="ggasjhdf">
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Customers/controllers/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Customers/controllers/CustomerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Customers/model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Customers/model/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Customers/model/TypeCus.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Customers/model/TypeCus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Customers/repo/CustomerRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Customers/repo/CustomerRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Customers/repo/ICutomerRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Customers/repo/ICutomerRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Customers/service/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Customers/service/CustomerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Customers/service/ICustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Customers/service/ICustomerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/Module3_AccountName_WBE-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/Module3_AccountName_WBE-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Customers/controllers/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customers/controllers/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Customers/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customers/model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Customers/model/TypeCus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customers/model/TypeCus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Customers/repo/CustomerRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customers/repo/CustomerRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Customers/repo/ICutomerRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customers/repo/ICutomerRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Customers/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customers/service/CustomerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Customers/service/ICustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customers/service/ICustomerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/customer/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/customer/create.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/customer/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/customer/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +25,22 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="2IUtq2Sc3wsQx9vHa5Tp11FpCbs" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -60,6 +52,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../module2/src/REGEX_libary/Regex.java" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.42002302" />
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.68" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.68" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
@@ -158,11 +158,54 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670248179978</updated>
-      <workItem from="1670248181693" duration="298000" />
+      <workItem from="1670248181693" duration="1736000" />
+      <workItem from="1670410656495" duration="12259000" />
     </task>
+    <task id="LOCAL-00001" summary="ggasjhdf">
+      <created>1670248721779</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670248721779</updated>
+    </task>
+    <task id="LOCAL-00002" summary="ggasjhdf">
+      <created>1670248952296</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670248952296</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ggasjhdf" />
+    <option name="LAST_COMMIT_MESSAGE" value="ggasjhdf" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Customers/controllers/CustomerController.java</url>
+          <line>147</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

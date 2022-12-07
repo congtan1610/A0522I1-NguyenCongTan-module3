@@ -33,6 +33,11 @@ private CustomerRepo customerRepo=new CustomerRepo()    ;
         return customerRepo.findOne(id);
     }
 
+    @Override
+    public List<Customer> search(String search) {
+        return customerRepo.search(search);
+    }
+
     public List<TypeCus> getType(){
         return customerRepo.getType();
     }

@@ -2,19 +2,21 @@ package Customers.repo;
 
 import Customers.model.Customer;
 import Customers.model.TypeCus;
-import com.mysql.cj.jdbc.ClientPreparedStatement;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class CustomerRepo implements ICutomerRepo {
     public static final String INSERT_CUSTOMER = "insert into khach_hang(ma_khach_hang,ma_loai_khach,ho_ten,ngay_sinh,gioi_tinh,so_cmnd,so_dien_thoai,email,dia_chi) value (?,?,?,?,?,?,?,?,?)";
     public static final String SELECT_FROM_LOAI_KHACH = "select * from loai_khach";
     public static final String UPDATE_KHACH_HANG = "update khach_hang set ma_loai_khach=?,ho_ten=?,ngay_sinh=?,gioi_tinh=?,so_cmnd=?,so_dien_thoai=?,email=?,dia_chi=? where ma_khach_hang=?";
+    public static final String SEARCH = "select * from khach_hang join loai_khach on khach_hang.ma_loai_khach=loai_khach.ma_loai_khach where ho_ten like ? or ten_loai_khach like ? or so_cmnd like ?";
     private BaseRepo baseRepo = new BaseRepo();
 
 
@@ -24,7 +26,6 @@ public class CustomerRepo implements ICutomerRepo {
         try (Connection connection = this.baseRepo.getConnectionJavaToDB();
              PreparedStatement preparedStatement = connection.prepareStatement(SELECT_FROM_LOAI_KHACH);
              ResultSet resultSet = preparedStatement.executeQuery();) {
-
             TypeCus typeCus;
             while (resultSet.next()) {
                 typeCus = new TypeCus();
@@ -83,7 +84,7 @@ public class CustomerRepo implements ICutomerRepo {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return list;
+        return sort(list);
     }
 
     @Override
@@ -142,5 +143,50 @@ public class CustomerRepo implements ICutomerRepo {
             e.printStackTrace();
         }
         return list.get(list.indexOf(new Customer(id)));
+    }
+
+    @Override
+    public List<Customer> search(String search) {
+
+        List<Customer> list = new ArrayList<>();
+        if (search.isEmpty()) {
+            return list;
+        }
+        try (Connection connection = this.baseRepo.getConnectionJavaToDB();
+             PreparedStatement preparedStatement = connection.prepareStatement(SEARCH);
+        ) {
+            preparedStatement.setString(1, "%" + search.toLowerCase() + "%");
+            preparedStatement.setString(2, "%" + search.toLowerCase() + "%");
+            preparedStatement.setString(3, "%" + search.toLowerCase() + "%");
+            ResultSet resultSet = preparedStatement.executeQuery();
+            Customer customer;
+            while (resultSet.next()) {
+                customer = new Customer();
+                customer.setId(resultSet.getInt("ma_khach_hang"));
+                customer.setType_id(resultSet.getInt("ma_loai_khach"));
+                customer.setName(resultSet.getString("ho_ten"));
+                customer.setDateOfBirth(resultSet.getString("ngay_sinh"));
+                customer.setGender(resultSet.getInt("gioi_tinh"));
+                customer.setCmnd(resultSet.getString("so_cmnd"));
+                customer.setSdt(resultSet.getString("so_dien_thoai"));
+                customer.setEmail(resultSet.getString("email"));
+                customer.setAddress(resultSet.getString("dia_chi"));
+                list.add(customer);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return sort(list);
+    }
+
+    public List<Customer> sort(List<Customer> list) {
+        Collections.sort(list, new Comparator<Customer>() {
+            @Override
+            public int compare(Customer o1, Customer o2) {
+                return o1.getId() > (o2.getId()) ? 1 : -1;
+            }
+        });
+        return list;
     }
 }

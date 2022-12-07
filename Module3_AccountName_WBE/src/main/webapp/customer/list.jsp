@@ -17,10 +17,28 @@
         a {
             text-decoration: none;
         }
+
+        button {
+            border: 2px solid white;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: aqua;
+            color: red;
+        }
     </style>
 </head>
 <body class="container-fluid" style="padding-left: 0;padding-right: 0;">
-<a href="/cus?action=add" style="text-decoration: none">Add new</a>
+<h1>
+    <center>Customers</center>
+</h1>
+<button style="float: left"><a href="/cus?action=add" style="text-decoration: none">Add new</a></button>
+<button style="float: left"><a href="/cus?action=list" style="text-decoration: none">All</a></button>
+<form action="/cus" method="post" style="margin-left: 800px">
+    <input type="text" name="search" placeholder="Enter your name, type_id or id_card" style="width: 400px" value="${search}">
+    <input type="submit" name="action" value="search">
+</form>
 <table class="table table-striped">
     <tr>
         <th>id</th>
@@ -34,6 +52,11 @@
         <th>address</th>
         <th>CRUD</th>
     </tr>
+    <c:if test="${list.isEmpty()}">
+        <tr>
+            <td colspan="10">Not Found</td>
+        </tr>
+    </c:if>
     <c:forEach items="${list}" var="customer">
         <tr>
             <td>${customer.id}</td>

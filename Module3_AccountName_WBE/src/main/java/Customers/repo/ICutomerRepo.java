@@ -10,5 +10,6 @@ public interface ICutomerRepo {
     void delete(int id);
     void  update(Customer customer);
     Customer findOne(int id);
+    List<Customer> search(String search);
 }
 
